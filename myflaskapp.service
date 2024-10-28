@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to serve myflaskapp
+After=network.target
+ 
+[Service]
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/workspace/FlaskApplication
+Environment="PATH=/home/ubuntu/workspace/FlaskApplication/venv/bin"
+ExecStart=/home/ubuntu/workspace/FlaskApplication/venv/bin/gunicorn -b 0.0.0.0:5000 app:app
+ 
+[Install]
+WantedBy=multi-user.target
