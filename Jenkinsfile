@@ -15,7 +15,7 @@ pipeline {
         stage('Test') {
             steps {
                 // Run unit tests
-                sh './$VENV_PATH/bin/pytest tests/'
+                sh './$VENV_PATH/bin/pytest test/'
             }
         }
         stage('Deploy') {
