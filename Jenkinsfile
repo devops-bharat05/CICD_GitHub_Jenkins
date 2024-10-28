@@ -27,8 +27,8 @@ pipeline {
                 script {
                     sh """
                     sudo cp myflaskapp.service /etc/systemd/system/myflaskapp.service
-                    sudo systemctl daemon-reload
                     sudo systemctl start myflaskapp
+                    sudo systemctl daemon-reload
                     sudo systemctl enable myflaskapp
                     sudo systemctl status myflaskapp
                     """
