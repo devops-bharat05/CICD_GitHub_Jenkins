@@ -7,7 +7,7 @@ User=ubuntu
 Group=ubuntu
 WorkingDirectory=/home/ubuntu/workspace/Jenkins CI CD pipeline for flask application
 Environment="PATH=/home/ubuntu/workspace/Jenkins CI CD pipeline for flask application/venv/bin"
-ExecStart=/home/ubuntu/workspace/Jenkins CI CD pipeline for flask application/venv/bin/gunicorn -b 0.0.0.0:5000 myflaskapp:app
+ExecStart=/home/ubuntu/workspace/Jenkins CI CD pipeline for flask application/venv/bin/gunicorn -b 0.0.0.0:5000 app:app
  
 [Install]
 WantedBy=multi-user.target
