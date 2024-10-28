@@ -1,18 +1,9 @@
 from flask import Flask
-
 app = Flask(__name__)
 
-@app.route('/', methods=['GET'])
-def helloWorld():
-    return 'Hello World this is SIMBA and MUFASA'
+@app.route("/")
+def hello():
+    return "<h1 style='color:blue'>Hello There!</h1>"
 
-@app.route('/aboutUs')
-def aboutUs():
-    return 'this is about us page'
-
-@app.route('/contactus', methods=['POST'])
-def contactUs():
-    return 'this is contact us page'
-
-if __name__ == '__main__':
-    app.run(port=3000, debug=True) #........
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
